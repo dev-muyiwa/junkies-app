@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/spacing_15"
+    android:orientation="vertical"
+    tools:context=".DetailsFragment">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:elevation="@dimen/spacing_5">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:contentDescription="@string/back"
+            app:srcCompat="@drawable/ic_back"
+            app:tint="@color/dark_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/details"
+            android:textColor="@color/dark_blue"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageButton
+            android:id="@+id/favorite_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/light_gray"
+            android:contentDescription="@string/like"
+            android:padding="@dimen/spacing_10"
+            app:srcCompat="@drawable/ic_favorite"
+            tools:ignore="TouchTargetSizeCheck" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:layout_above="@id/details_price"
+        android:layout_marginTop="@dimen/spacing_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                app:cardCornerRadius="@dimen/spacing_10">
+
+                <ImageView
+                    android:id="@+id/details_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/food_image"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/burger_v2" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/details_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_20"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/food_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_30" />
+
+            <TextView
+                android:id="@+id/details_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_15"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/light_gray"
+                android:drawablePadding="@dimen/spacing_8"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:padding="@dimen/spacing_8"
+                app:drawableStartCompat="@drawable/ic_star"
+                tools:text="4.9" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_20" />
+
+            <TextView
+                android:id="@+id/details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/food_description"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_16" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/details_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/add_to_cart_btn"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/spacing_20"
+        android:fontFamily="@font/montserrat_bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_30"
+        tools:text="#6,700" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/details_price"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/minus_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:srcCompat="@drawable/ic_minus_circle" />
+
+        <TextView
+            android:id="@+id/order_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_15"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20" />
+
+        <ImageButton
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:srcCompat="@drawable/ic_add_circle"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_to_cart_btn"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/spacing_8"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="@color/yellow"
+        android:elevation="1dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_cart"
+            app:tint="@color/dark_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_5"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/dark_blue" />
+    </LinearLayout>
+
+</RelativeLayout>

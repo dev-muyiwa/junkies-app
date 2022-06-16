@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Food &amp; Junks</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="search_info">burger, chips…</string>
+    <string name="search">search</string>
+    <string name="menu">menu</string>
+    <string name="recommended">Recommended</string>
+    <string name="categories">Categories</string>
+    <string name="burger">Burger</string>
+    <string name="pizza">Pizza</string>
+    <string name="course">Course</string>
+    <string name="drinks">Drinks</string>
+    <string name="details">Details</string>
+    <string name="like">Like</string>
+    <string name="back">Back</string>
+    <string name="add_to_cart">Add To Cart</string>
+    <string name="cart">Cart</string>
+    <string name="food_image">Image of a Meal</string>
+    <string name="food_name">Chicky Cheese</string>
+    <string name="description">Description</string>
+    <string name="food_description">Signature burger made with a crunchy chicken fillet, veggies,
+        double cheddar cheese &amp; delicious mayo sauce</string>
+    <string name="price">N6,700</string>
+    <string name="_zero">0</string>
+    <string name="minus">minus</string>
+    <string name="add">add</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="orders">Orders</string>
+    <string name="meal_name">Krabby Combo Burger</string>
+    <string name="food_contents">Burger, Chips &amp; Milkshake</string>
+
+</resources>

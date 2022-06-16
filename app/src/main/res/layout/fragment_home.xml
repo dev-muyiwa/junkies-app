@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_20"
+            android:layout_marginTop="@dimen/spacing_10"
+            android:layout_marginEnd="@dimen/spacing_20"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/menu_bar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/spacing_15"
+                android:contentDescription="@string/menu"
+                app:srcCompat="@drawable/ic_menu"
+                app:tint="@color/dark_blue" />
+
+            <androidx.appcompat.widget.SearchView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rounded_corners"
+                android:maxWidth="350dp"
+                app:queryBackground="@color/blue"
+                app:queryHint="@string/search_info"
+                app:searchHintIcon="@drawable/ic_search"
+                app:searchIcon="@drawable/ic_search" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/action_bar"
+            android:paddingStart="@dimen/spacing_20"
+            android:paddingEnd="@dimen/spacing_20">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/recommended"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_25" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/recommended_view_pager"
+                    android:layout_width="400dp"
+                    android:layout_height="230dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_10">
+
+                </androidx.viewpager2.widget.ViewPager2>
+
+                <LinearLayout
+                    android:id="@+id/indicator_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_15"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/categories"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_25" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_10"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_5"
+                        android:layout_marginEnd="@dimen/spacing_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corners"
+                        android:drawablePadding="@dimen/spacing_5"
+                        android:elevation="@dimen/spacing_5"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/spacing_10"
+                        android:text="@string/burger"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue"
+                        app:drawableTint="@color/dark_blue"
+                        app:drawableTopCompat="@drawable/ic_burger" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_5"
+                        android:layout_marginEnd="@dimen/spacing_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corners"
+                        android:drawablePadding="@dimen/spacing_5"
+                        android:elevation="@dimen/spacing_5"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/spacing_10"
+                        android:text="@string/pizza"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue"
+                        app:drawableTint="@color/dark_blue"
+                        app:drawableTopCompat="@drawable/ic_pizza_slice" />
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_5"
+                        android:layout_marginEnd="@dimen/spacing_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corners"
+                        android:drawablePadding="@dimen/spacing_5"
+                        android:elevation="@dimen/spacing_5"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/spacing_10"
+                        android:text="@string/course"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue"
+                        app:drawableTint="@color/dark_blue"
+                        app:drawableTopCompat="@drawable/ic_food" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_5"
+                        android:layout_marginEnd="@dimen/spacing_5"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corners"
+                        android:drawablePadding="@dimen/spacing_5"
+                        android:elevation="@dimen/spacing_5"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/spacing_10"
+                        android:text="@string/drinks"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue"
+                        app:drawableTint="@color/dark_blue"
+                        app:drawableTopCompat="@drawable/ic_drink" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/categories_recycler_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clipChildren="false"
+                    android:clipToPadding="false" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</FrameLayout>

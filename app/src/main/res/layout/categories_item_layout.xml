@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/categories_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/spacing_5"
+    app:cardCornerRadius="@dimen/spacing_5"
+    app:cardElevation="@dimen/spacing_3">
+
+    <RelativeLayout
+        android:layout_width="190dp"
+        android:layout_height="230dp"
+        android:paddingStart="@dimen/spacing_5"
+        android:paddingTop="@dimen/spacing_5">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_image"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/spacing_5"
+            app:cardCornerRadius="@dimen/spacing_5"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@drawable/pizza_v1" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_view_image"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/spacing_5"
+            android:layout_marginBottom="@dimen/spacing_5"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            tools:text="Chicky Cheese" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/spacing_5"
+            android:drawablePadding="@dimen/spacing_5"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textSize="@dimen/text_12"
+            app:drawableStartCompat="@drawable/ic_star"
+            app:drawableTint="@color/yellow"
+            tools:text="4.9" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/spacing_5"
+            android:layout_marginEnd="@dimen/spacing_8"
+            android:drawablePadding="@dimen/spacing_5"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textSize="@dimen/text_12"
+            app:drawableStartCompat="@drawable/ic_truck_time"
+            tools:text="10 min" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/spacing_15"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20"
+            tools:text="N6,700" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/yellow"
+            android:padding="@dimen/spacing_5"
+            app:srcCompat="@drawable/ic_cart"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
