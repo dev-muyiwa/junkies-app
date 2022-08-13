@@ -1,4 +1,7 @@
-# Food-Junks
-This is a demo android application created from a UI design gotten from Twitter
+# Android Recycler App
+A junk food delivery app
 
-It uses core aspect of android like ViewPager2 + RecyclerView, Navigation Components
+# Functionality
+- Parses an ArrayList of data into a RecyclerView
+- Clicking on each item in the RecyclerView shows more details in a new screen
+
